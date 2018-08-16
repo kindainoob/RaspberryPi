@@ -1,8 +1,5 @@
 #coding:utf-8
-# str = '・・－・・－－－・・－－・－・・'
 str = '..-..---..--.-..'
-
-#print(str)
 
 for num in range(len(str)):
     if str[num] == '.':

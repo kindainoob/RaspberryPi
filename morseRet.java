@@ -15,7 +15,7 @@ class morseRet{
       tmp = mc.convertMorse(c);
       for(int j = 0; j <tmp.length(); j++) {
         d = tmp.charAt(j);
-        //System.out.println();
+
         if (d == '・') {
           s = ".";
         }
