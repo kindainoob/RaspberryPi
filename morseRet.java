@@ -1,32 +1,33 @@
+import java.util.ArrayList;
 class morseRet{
   public static void main(String[] args) {
-    String str = args[0];
-    String morse = "";
+
     MorseCode mc = new MorseCode();
 
-    for(int i = 0; i < str.length(); i++){
-      char c;
-      char d;
-      String s;
-      String tmp;
-      String temp = "";
+    String str = args[0];
+    String sCut;
+    String tmp;
+    String s = "";
+    char tmpChar;
+    ArrayList<Character> morseList = new ArrayList<Character>();
 
-      c = str.charAt(i);
-      tmp = mc.convertMorse(c);
-      for(int j = 0; j <tmp.length(); j++) {
-        d = tmp.charAt(j);
-
-        if (d == '・') {
-          s = ".";
-        }
-        else {
-          s = "-";
-        }
-         temp += s;
-      }
-      morse += temp;
+    char[] cut = str.toCharArray();
+    for(char c : cut) {
+      morseList.add(c);
+      morseList.add(' ');
     }
+    morseList.remove((morseList.size())-1);
 
-    System.out.println(morse);
+    for(char c: morseList) {
+      tmp = mc.convertMorse(c);
+      for(int i = 0; i < tmp.length(); i++) {
+        tmpChar = tmp.charAt(i);
+
+        if(tmpChar == ' '||tmpChar == '　') s = "~";//文字と文字の間
+        if(tmpChar == '・') s = ".";//とん
+        if(tmpChar == '－') s = "-";//つー
+        System.out.println(s);
+      }
+    }
   }
 }
