@@ -12,24 +12,21 @@ class morseRet{
     ArrayList<Character> morseList = new ArrayList<Character>();
 
     char[] cut = str.toCharArray();
-    // System.out.println(cut);
     for(char c : cut) {
-      morseList.add(c);
       morseList.add(' ');
+      morseList.add(c);
     }
-    morseList.remove((morseList.size())-1);
-    // System.out.println(morseList);
+    morseList.remove(0);
     for(char c: morseList) {
       tmp = mc.convertMorse(c);
       for(int i = 0; i < tmp.length(); i++) {
         tmpChar = tmp.charAt(i);
-        // System.out.println(tmpChar);
         if(tmpChar == ' '||tmpChar == '　') s = "~";//文字と文字の間
         if(tmpChar == '・') s = ".";//とん
         if(tmpChar == '－') s = "-";//つー
         if(tmpChar == '_') s = "_";//単語の区切り
+        else System.out.print("");
         System.out.println(s);
-        //なんじ_うんぬん_かんぬん_を_しる_だろ_う_、_くるっ_ぱ
       }
     }
   }
