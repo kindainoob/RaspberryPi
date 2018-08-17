@@ -42,6 +42,7 @@ for num in range(len(str)):
 
     if str[num] == '.':
         print('とん')
+        light_up
         # print('処理A')  1拍点灯
         pass
     if str[num] == '-':
@@ -56,3 +57,16 @@ for num in range(len(str)):
         print('アンダースコア')
         # print('処理D')  7拍消灯
         # ７拍点灯だがスペース時の3拍に挟まれるため1拍消灯で3+1+3で7拍消灯となる
+        
+def light_up(minute):
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(23, GPIO.OUT)
+    GPIO.output(23, GPIO.HIGH)
+    time.sleep(minute)
+    GPIO.cleanup()
+
+
+def light_down(minute):
+    x = minute if minue < 7 else 7
+    time.sleep(x)
+    pass
