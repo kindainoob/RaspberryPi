@@ -3,8 +3,8 @@ import subprocess
 from pykakasi import kakasi
 import MeCab
 
-pic = u'汝云々カンヌンを知るだろう、くるっぱ'  # 音声の取得データ
-# pic = u'くるっぱ'
+# pic = u'汝云々カンヌンを知るだろう、くるっぱ'  # 音声の取得データ
+pic = u'くるっぱ'
 pic = ''.join(pic.split())  # 空白の削除
 print(pic)
 

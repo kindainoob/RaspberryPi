@@ -12,4 +12,9 @@
 
 参考
 
-> https://github.com/miurahr/pykakasi
+- MeCab
+
+  > https://qiita.com/taroc/items/b9afd914432da08dafc8 > http://taku910.github.io/mecab/#install-unix
+
+- Pykakasi
+  > https://github.com/miurahr/pykakasi
