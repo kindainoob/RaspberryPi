@@ -44,13 +44,16 @@ for num in range(len(str)):
 
     if str[num] == '.':
         print('とん')
-        # print('処理A')
+        # print('処理A')  1拍点灯
         pass
     if str[num] == '-':
         print('つー')
-        # print('処理B')
+        # print('処理B')  3拍点灯
         pass
     if str[num] == '~':
         print('スペース')
-        # print('処理C')
+        # print('処理C')  　3拍消灯
         pass
+    if str[num] == '_':
+        print('アンダースコア')
+        # print('処理D')  7拍消灯
