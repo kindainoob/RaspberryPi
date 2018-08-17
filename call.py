@@ -3,8 +3,8 @@ import subprocess
 from pykakasi import kakasi
 import MeCab
 
-# pic = u'汝云々カンヌンを知るだろう、くるっぱ'  # 音声の取得データ
-pic = u'くるっぱ'
+pic = u'汝云々カンヌンを知るだろう、くるっぱ'  # 音声の取得データ
+# pic = u'くるっぱ'
 pic = ''.join(pic.split())  # 空白の削除
 print(pic)
 
@@ -31,6 +31,7 @@ print(pic)
 
 # Javaのファイルで文字列をモールス信号に変換
 cmd = 'java morseRet ' + pic
+print(cmd)
 process = subprocess.Popen(cmd, stdout=subprocess.PIPE,
                            shell=True).communicate()[0]
 
@@ -44,13 +45,16 @@ for num in range(len(str)):
 
     if str[num] == '.':
         print('とん')
-        # print('処理A')
+        # print('処理A')  1拍点灯
         pass
     if str[num] == '-':
         print('つー')
-        # print('処理B')
+        # print('処理B')  3拍点灯
         pass
     if str[num] == '~':
         print('スペース')
-        # print('処理C')
+        # print('処理C')  　3拍消灯
         pass
+    if str[num] == '_':
+        print('アンダースコア')
+        # print('処理D')  7拍消灯
