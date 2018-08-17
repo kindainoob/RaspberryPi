@@ -873,7 +873,7 @@ public class MorseCode{
                 return "・・－－・";
             }
 
-
-            return " ";
+            String str = String.valueOf(c);
+            return str;
     }
 }
