@@ -1,0 +1,29 @@
+header{
+  color: white;
+  padding: 10px;
+  padding-bottom: 150px;
+  background-image: url(./head.png);
+  background-size: cover;
+}
+body{
+  background-color:#deb887;
+}
+.sumaho{
+  font-size: 20px;
+  padding: 50px;
+  padding-bottom: 120px;
+  float: left;
+}
+.sumahoph{
+  padding-left: 77px;
+  padding-bottom: 0px;
+}
+.morse{
+  font-size: 20px;
+  padding-top: 0px;
+  padding:50px;
+  float: left;
+}
+.morseph{
+  padding-top: 0px;
+}
